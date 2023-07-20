@@ -7,18 +7,18 @@
 </head>
 <body>
 
-    <form action=" Welcom.php" method="post">
+    <form action="kienthucbai3.php" method="post">
         <label for="name"> Tên đăng nhập:</label>
         <input  id = "name" type="text" name="name" ><br> 
         
         <label > Ngày sinh:</label>
-        <input  type="datetime" name="Date"><br> 
+        <input  type="date" name="Date"><br> 
        
         <label > Số điện thoại:</label>
-        <input   type="text" name="phone" ><br> 
+        <input   type="number" name="phone" ><br> 
        
         <label > Email:</label>
-        <input  type="text"  name="Email"><br> 
+        <input  type="email"  name="Email"><br> 
        
         <label > Giới tính: </label> 
         <label >Nam</label>
