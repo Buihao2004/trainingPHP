@@ -1,15 +1,31 @@
-<?php
-$spider = [
-    ["tom",96,5],
-    ["hoa",98,15],
-    ["ho",93,25],
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="post">
+        Text: <input type="text" name="text"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
 
-];
-for($i = 0; $i <count($spider); $i++){
-    echo "Dòng $i: " ;
-for($j = 0; $j <count($spider[$i]);$j++){
-    echo "cột $j:" . $spider[$i][$j]."";
-}
-echo "<br>";
-}
+<?php
+
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $text = $_POST["text"];
+        $res = "";
+
+        echo "BEFORE: " . $text . "<br>";
+
+        for ($i = strlen($text) - 1; $i >= 0; $i--) { 
+            $res .= $text[$i];
+        }
+    
+        echo "AFTER: " . $res;
+    }
+  
 ?>

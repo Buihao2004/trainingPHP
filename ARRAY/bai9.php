@@ -1,5 +1,13 @@
 <?php
-
+/** Cho 1 mảng số tự nhiên 3x3, 
+[2][4][3] 
+[5][3][7] 
+[5][1][2]
+ Nhập n là số lần quay (quay từ trái sang phải) Ví dụ n = 1; 
+[5][5][2] 
+[1][3][4] 
+[2][7][3]
+*/
 $array = array(
     array(2, 4, 3),
     array(5, 3, 7),

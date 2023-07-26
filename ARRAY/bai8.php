@@ -1,32 +1,44 @@
-<?php
-// Nhập chuỗi từ người dùng
-$string = "Hello";
 
-// Khởi tạo mảng để lưu ký tự và số lượng
-$count = array();
-
-// Duyệt qua từng ký tự trong chuỗi
-for ($i = 0; $i < strlen($string); $i++) {
-    $char = $string[$i];
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Đếm chuỗi</title>
+</head>
+<body>
+<body>
+    <form action="bai8.php" method="post">
+        String: <input type="text" name="string"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
     
-    // Kiểm tra xem ký tự đã tồn tại trong mảng hay chưa
-    if (isset($count[$char])) {
-        // Nếu đã tồn tại, tăng số lượng lên 1
-        $count[$char]++;
-    } else {
-        // Nếu chưa tồn tại, gán số lượng bằng 1
-        $count[$char] = 1;
-    }
-}
+</body>
+</html>
 
-// Khởi tạo chuỗi kết quả
+<?php
+//Viết chương trình nhập vào 1 string bất kỳ 
+//và in ra chuỗi gồm ký tự và số lần xuất hiện của ký tự đó trong chuỗi
+ if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $string = $_POST["string"];
+
+    $count = array();
+    for ($i = 0; $i < strlen($string); $i++) {
+     $char = $string[$i];
+    
+         if (isset($count[$char])) {
+    
+            $count[$char]++;
+         } else {
+    
+             $count[$char] = 1;
+          }
+}
 $output = "";
-
-// Duyệt qua mảng ký tự và số lượng để tạo chuỗi kết quả
 foreach ($count as $char => $charCount) {
-    $output .= $char . $charCount;
+    $output .= $char . $charCount; 
 }
 
-// In ra chuỗi kết quả
-echo "Chuỗi ký tự và số lần xuất hiện: " . $output;
+    echo "Chuỗi ký tự và số lần xuất hiện: " . $output;
+ }
 ?>

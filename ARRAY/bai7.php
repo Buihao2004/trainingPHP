@@ -1,11 +1,14 @@
 <?php
+//Viết chương trình tạo ra 1 ma trận 2 chiều hình vuông số nguyên bất kỳ và 4
+//tính tổng 2 đường chéo của ma trận
+
 $size = 3; 
 $matrix = [];
 
 
 for ($i = 0; $i < $size; $i++) {
     for ($j = 0; $j < $size; $j++) {
-        $matrix[$i][$j] = rand(1, 10);
+        $matrix[$i][$j] = rand(1,10);
     }
 }
 
@@ -13,23 +16,23 @@ echo "Ma trận:<br>";
 
 for ($i = 0; $i < $size; $i++) {
     for ($j = 0; $j < $size; $j++) {
-        echo $matrix[$i][$j] . "\t";
+        echo $matrix[$i][$j] . "\n";
     }
     echo "<br>";
 }
 
 
-$sumMainDiagonal = 0;
+$sumMain = 0;
 for ($i = 0; $i < $size; $i++) {
-    $sumMainDiagonal += $matrix[$i][$i];
+    $sumMain += $matrix[$i][$i];
 }
 
 
-$sumSubDiagonal = 0;
+$sumSub= 0;
 for ($i = 0; $i < $size; $i++) {
-    $sumSubDiagonal += $matrix[$i][$size - 1 - $i];
+    $sumSub += $matrix[$i][$size - 1 - $i];
 }
 
-echo "Tổng đường chéo chính: " . $sumMainDiagonal . "<br>";
-echo "Tổng đường chéo phụ: " . $sumSubDiagonal . "<br>";
+echo "Tổng đường chéo chính: " . $sumMain . "<br>";
+echo "Tổng đường chéo phụ: " . $sumSub . "<br>";
 ?>

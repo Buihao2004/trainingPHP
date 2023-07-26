@@ -1,15 +1,17 @@
 <?php
-// Nhập chuỗi từ người dùng
+
+//Viết chương trình nhập vào 1 chuỗi là kiểm tra xem chuỗi đó có phải là 1 palindrome hay ko
+
 $input = "1881";
 
 
-// kiểm tra palindrome
+
 function Palindrome($str) {
   
-    // Đảo ngược chuỗi
+   
     $reverseStr = strrev($str);
 
-    // So sánh chuỗi gốc với chuỗi đảo ngược
+    
     if ($str === $reverseStr) {
         return true;
     } else {
