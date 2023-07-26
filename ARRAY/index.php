@@ -1,7 +1,15 @@
 <?php
-$array1 = [1,2,3,4,5,6,7];
-foreach ($array1 as $val){
+$spider = [
+    ["tom",96,5],
+    ["hoa",98,15],
+    ["ho",93,25],
 
-    echo $val.'<br>';
+];
+for($i = 0; $i <count($spider); $i++){
+    echo "Dòng $i: " ;
+for($j = 0; $j <count($spider[$i]);$j++){
+    echo "cột $j:" . $spider[$i][$j]."";
+}
+echo "<br>";
 }
 ?>
