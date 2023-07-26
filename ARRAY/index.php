@@ -17,15 +17,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $text = $_POST["text"];
-        $res = "";
-
-        echo "BEFORE: " . $text . "<br>";
-
-        for ($i = strlen($text) - 1; $i >= 0; $i--) { 
-            $res .= $text[$i];
-        }
-    
-        echo "AFTER: " . $res;
+        
     }
   
 ?>
