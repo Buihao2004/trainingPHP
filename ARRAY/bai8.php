@@ -22,21 +22,22 @@
  if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $string = $_POST["string"];
 
-    $count = array();
+    $result = [];
     for ($i = 0; $i < strlen($string); $i++) {
      $char = $string[$i];
     
-         if (isset($count[$char])) {
+         if (isset($result[$char])) {
     
-            $count[$char]++;
+            $result[$char]++;
          } else {
     
-             $count[$char] = 1;
+             $result[$char] = 1;
           }
 }
 $output = "";
-foreach ($count as $char => $charCount) {
-    $output .= $char . $charCount; 
+
+foreach ($result as $char => $count) {
+    $output .= $char . $count; 
 }
 
     echo "Chuỗi ký tự và số lần xuất hiện: " . $output;

@@ -1,17 +1,15 @@
 <?php
 //Viết chương trình tạo 1 mảng số nguyên bất kỳ và tìm in ra số lớn nhất và nhỏ nhất trong mảng
+$size = 10;
+$arr = [];
 
-$arr = [1,2,5,6,78,77,399,44444];
-$max = $arr[0];
-$min = $arr[0];
-for($i = 0; $i < count($arr); $i++){
-    if( $arr[$i] > $max) {
-        $max = $arr[$i];
-
-    }elseif($arr[$i] < $min){
-$min = $arr[$i];
-    }
+for($i = 0; $i < $size; $i++)
+{
+    $arr[] = rand(1, 100);
+     $max = max($arr);
 }
-echo "giá trị lớn nhất trong mảng là: " . $max ;
-echo "<br> giá trị nhỏ nhất trong mảng là:" . $min;
+    $min = min($arr);
+    echo "giá trị lớn nhất trong mảng là: " . $max ;
+    echo "<br> giá trị nhỏ nhất trong mảng là:" . $min;
+
 ?>

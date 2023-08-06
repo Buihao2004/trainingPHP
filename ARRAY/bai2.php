@@ -2,28 +2,21 @@
 //Viết chương trình tạo 1 mảng số nguyên bất kỳ và in ra mảng đó sau khi sắp xếp các giá trị từ nhỏ đến lớn 
  
 
-$mang = array(1, 5, 9, 2, 4, 88); 
+$array = []; 
   
-$count = 6; 
+$size = 10;
   
 
-for ($i = 0; $i < ($count - 1); $i++)
+for ($i = 0; $i < $size; $i++)
 {
-    for ($j = $i + 1; $j < $count; $j++) 
-    {
-        if ($mang[$i] > $mang[$j]) 
-        {
-          
-            $tmp = $mang[$j];
-            $mang[$j] = $mang[$i];
-            $mang[$i] = $tmp;
-        }
-    }
+    $array[] = rand(1, 100);
 }
   
+sort($array);
 
-for ($i = 0; $i < $count; $i++){
-    echo $mang[$i] . ' ';
+echo "Mảng sau khi xếp từ nhỏ đến lớn: " ;
+foreach ($array as $value) {
+    echo $value . " ";
 }
 
 ?>
